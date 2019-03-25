@@ -15,5 +15,8 @@ function Contact(first_name, second_name, phone_number, address)
 		this.first_name = first_name;
 		this.second_name = second_name;
 		this.phone_number = phone_number;
-		this.address = address;
+		this.address = [street, city, country];
 	}
+	Contact.address = function () {
+  return this.address[0] + " " + this.address[1] + " " this.address[2];
+};
