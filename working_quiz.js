@@ -38,5 +38,20 @@ var my_indexes = Object.keys(Flower);
 
 //get value of the first index
 let Flower_index = my_indexes[1];
-console.log("My Flower's " + Flower_index + " is " + Flower[Flower_index]);
+//console.log("My Flower's " + Flower_index + " is " + Flower[Flower_index]);
 
+let my_values = Object.values(Flower);
+//console.log(my_values);
+
+//Try using some of the string, number and array methods you have used
+// before on the properties that store these types of data.
+
+/*.........get a property that holds an array ................*/
+for(var i =0; i<my_values.length; i++)
+{
+	var findarray = my_values[i];
+	if(findarray.isArray == true)
+		{
+			console.log(findarray[]);
+		}
+}
