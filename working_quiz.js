@@ -8,4 +8,7 @@ var flower = {
 flower.color = "Yellow green";
 //Change the height of your flower using bracket notation.
 flower["height"]=30;
-console.log(flower.height);
+//Add a property that indicates what kind of creatures
+// help the flower with pollination. This includes bees, butterflies and birds.
+flower.pollinators =["bees", "butterflies", "birds"];
+console.log(flower.pollinators);
