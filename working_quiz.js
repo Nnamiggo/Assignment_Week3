@@ -1,32 +1,33 @@
-//Create an object that stores information about a flower including name, color, and height.
-var flower = {
-	name: "Sun flower",
+//Create an object that stores information about a Flower including name, color, and height.
+var Flower = {
+	name: "Sun Flower",
 	color : "Yellow",
 	height: 30
 };
 
-//Change the color of your flower using dot notation.
-flower.color = "Yellow green";
+//Change the color of your Flower using dot notation.
+Flower.color = "Yellow green";
 
-//Change the height of your flower using bracket notation.
-flower["height"]=30;
+//Change the height of your Flower using bracket notation.
+Flower["height"]=30;
 
 //Add a property that indicates what kind of creatures
-// help the flower with pollination. This includes bees, butterflies and birds.
-flower.pollinators =["bees", "butterflies", "birds"];
+// help the Flower with pollination. This includes bees, butterflies and birds.
+Flower.pollinators =["bees", "butterflies", "birds"];
 
 //Add one more creature to your list: humans
-flower.pollinators.push('humans');
-//console.log(flower.pollinators[flower.pollinators.length-1]);
+Flower.pollinators.push('humans');
+//console.log(Flower.pollinators[Flower.pollinators.length-1]);
 
-//Write a method that allows the flower to grow. After the method is run, the height value should be increased.
-flower.grow = function(){
+//Write a method that allows the Flower to grow. After the method is run, the height value should be increased.
+Flower.grow = function(){
 	//add property rainfall and temperature
-	flower.rainfall = 30;
-	flower.temperature = 20;
-	if(flower.rainfall>=30 && flower.temperature>=20){let new_height = flower.height +2; return new_height;}
+	Flower.rainfall = 30;
+	Flower.temperature = 20;
+	if(Flower.rainfall>=30 && Flower.temperature>=20){let new_height = Flower.height +2; return new_height;}
 
 };
 
-//View all of the properties and methods for your flower object.
-console.log(flower.entries());
+//View all of the properties and methods for your Flower object.
+let place_holder = Object.entries(Flower);
+console.log(place_holder);
