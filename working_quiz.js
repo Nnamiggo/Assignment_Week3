@@ -30,4 +30,13 @@ Flower.grow = function(){
 
 //View all of the properties and methods for your Flower object.
 let place_holder = Object.entries(Flower);
-console.log(place_holder);
+//console.log(place_holder);
+
+//Explore viewing, adding and updating more properties and methods on your flower object.
+var my_indexes = Object.keys(Flower);
+//console.log(my_indexes);
+
+//get value of the first index
+let Flower_index = my_indexes[1];
+console.log("My Flower's " + Flower_index + " is " + Flower[Flower_index]);
+
