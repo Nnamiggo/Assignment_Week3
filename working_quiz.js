@@ -47,11 +47,18 @@ let my_values = Object.values(Flower);
 // before on the properties that store these types of data.
 
 /*.........get a property that holds an array ................*/
+function get_array()
+{
 for(var i =0; i<my_values.length; i++)
 {
-	var findarray = my_values[i];
-	if(findarray.isArray == true)
+	//console.log(my_values[i]);
+	
+	if(my_values[i] instanceof Array === true)
 		{
-			console.log(findarray[]);
+			//console.log(my_values[i]);
+			return my_values[i];
 		}
 }
+}
+
+//console.log(my_values[i]);
