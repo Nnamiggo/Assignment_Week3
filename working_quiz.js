@@ -47,18 +47,21 @@ let my_values = Object.values(Flower);
 // before on the properties that store these types of data.
 
 /*.........get a property that holds an array ................*/
-function get_array()
+function get_array(x)
 {
-for(var i =0; i<my_values.length; i++)
-{
-	//console.log(my_values[i]);
-	
-	if(my_values[i] instanceof Array === true)
-		{
-			//console.log(my_values[i]);
-			return my_values[i];
-		}
+	let my_values = Object.values(x);
+	for(var i =0; i<my_values.length; i++)
+	{
+		//console.log(my_values[i]);
+		
+		if(my_values[i] instanceof Array === true)
+			{
+				//console.log(my_values[i]);
+				return my_values[i];
+			}
+	}
 }
-}
+var y= get_array(Flower);
 
-//console.log(my_values[i]);
+/*sort the items of an array*/
+console.log(y.sort());
