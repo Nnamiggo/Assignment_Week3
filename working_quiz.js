@@ -27,4 +27,6 @@ flower.grow = function(){
 	if(flower.rainfall>=30 && flower.temperature>=20){let new_height = flower.height +2; return new_height;}
 
 };
-console.log(flower.grow());
+
+//View all of the properties and methods for your flower object.
+console.log(flower.entries());
