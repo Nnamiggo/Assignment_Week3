@@ -76,12 +76,12 @@ for(let i=0; i<my_address_book.length; i++)
 
 	if(gona_edit_you==true)
 	{ 
-		function contactEdit(editing_you)
-		{
-			let object_index_array =Object.keys(editing_you);
-			 
-			}
-}
+		var object_index_array = Object.keys(editing_you);
+			object_index_array[0] = "new value"; //editing value at first index
+			object_index_array[1] = "new value"; //editing value at second index
+			object_index_array[2] = "new value"; //editing value at third index
+			object_index_array[3] = "new value"; //editing value at fourth index........e.t.c
+	}
 
 //
 // > Add an ID field to your address, so that I can look it up using its numeric ID.
