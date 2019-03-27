@@ -42,12 +42,12 @@ function Contact(first_name, second_name, phone_number, email, street, city, cou
 		this.address.street = street;
 		this.address.city = city;
 		this.address.country = country;
-		this.ID = Math.floor(Math.random()*1000000000000); //creating an Id with random values
+		this.address.ID = Math.floor(Math.random()*1000000000000); //creating an Id with random values
 		my_address_book.push(this);
 	};
 
 		Contact.prototype.full_address = function() {
-			return(this.address.street + ", " + this.address.city + ", " + this.address.country);
+			return(this.address.street + ", " + this.address.city + ", " + this.address.country );
 			
 			};
 
@@ -64,7 +64,7 @@ for(let i=0; i<my_address_book.length; i++)
 		{ 
 			my_address_book.splice(i,1); 
 
-			console.log(my_object + "has been deleted");
+			return(my_object + "has been deleted");
 			
 		} 
 	}
@@ -137,4 +137,5 @@ for(let i=0; i<my_address_book.length; i++) // address book is an array containi
 
 // console.log(delete_some_object(scosh));
 // console.log(restore(scosh));
-console.log(deleting_you(scosh));
+ console.log(scosh.full_address());
+
