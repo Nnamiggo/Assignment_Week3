@@ -15,8 +15,9 @@ ________________________________________________________________________________
 //pseudo
 	// First create the address book as an array to hold each object that is created
 	// delete function 
-		/* search the array containing created object if the value exits delete it then also stop */
+		/* search the array containing created objects if the value exits delete it then also stop */
 	// create edit function
+		/* search the array containing created objects if the value exits edit it then also stop */
 
 var my_address_book =[];
 
@@ -42,6 +43,8 @@ function Contact(first_name, second_name, phone_number, email, street, city, cou
 var scosh = new Contact("scovia", "Nnamiggo", "0703268406", "wakiso", "kampala", "uganda");
 var arthur = new Contact("Arthur", "King", "0703268406", "wakiso", "kampala", "uganda");
 
+/* implementing delete function */
+
 var deleting_you; //This holds what I want to delete either input or a constant
 
 for(let i=0; i<my_address_book.length; i++)
@@ -49,9 +52,36 @@ for(let i=0; i<my_address_book.length; i++)
 	if(my_address_book[i]=== deleting_you)
 		{ 
 			my_address_book.splice(i,1); 
-			cosole.log(deleting_you + "has been deleted");
+
+			console.log(deleting_you + "has been deleted");
+			
 		} 
 	}
+
+/* implementing edit function */
+
+
+var editing_you; //This holds the object whose properties I want to edit either input or a constant
+
+var gona_edit_you=false; //This checks if the object is in the array
+
+for(let i=0; i<my_address_book.length; i++)
+	{
+	if(my_address_book[i]=== editing_you)
+		{ 
+			var gona_edit_you = true;
+			
+		} 
+	}
+
+	if(gona_edit_you==true)
+	{ 
+		function contactEdit(editing_you)
+		{
+			let object_index_array =Object.keys(editing_you);
+			 
+			}
+}
 
 //
 // > Add an ID field to your address, so that I can look it up using its numeric ID.
