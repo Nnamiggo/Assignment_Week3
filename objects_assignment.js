@@ -10,6 +10,14 @@ Add a prototype method that returns the full Address of the user in form of stre
 ____________________________________________________________________________________________________
 */
 
+/*...............................Optional:.................................*/
+//Add ways of editing and deleting contacts from your address book. All fields except email address should be editable.
+//pseudo
+	// First create the address book as an array to hold each object that is created
+	// create edit function 
+	// create delete function
+
+var my_address_book =[];
 
 
 function Contact(first_name, second_name, phone_number, email, street, city, country)
@@ -22,18 +30,32 @@ function Contact(first_name, second_name, phone_number, email, street, city, cou
 		this.address.street = street;
 		this.address.city = city;
 		this.address.country = country;
-		//this.full_address = function(){ console.log(this.address.street + ", " + this.address.city + " " + this.address.country)};
+		my_address_book.push(this);
 	};
 
-
 		Contact.prototype.full_address = function() {
-			// var value_in_address =  this.address;
-			// this.street=value_in_address[0];
-			// this.city = value_in_address[1];
-			// this.state= value_in_address[2];
-			return(this.address.street + ", " + this.address.city + " " + this.address.country);
+			return(this.address.street + ", " + this.address.city + ", " + this.address.country);
 			
 			};
-var scosh = new Contact("scovia", "Nnamiggo", "0703268406","2305senk@gmail.com", "wakiso", "kampala", "uganda");
 
-console.log(scosh.full_address());
+/*...............................Optional:.................................*/
+
+//Add ways of editing and deleting contacts from your address book. All fields except email address should be editable.
+//pseudo
+	// First create the address book
+	// create edit function 
+	// create delete function
+var scosh = new Contact("scovia", "Nnamiggo", "0703268406", "wakiso", "kampala", "uganda");
+var arthur = new Contact("Arthur", "King", "0703268406", "wakiso", "kampala", "uganda");
+
+	//for each contact that is created push it in the my_address_book array
+	// my_address_book.push(Contact);
+console.log(my_address_book.value);
+
+// > Add an ID field to your address, so that I can look it up using its numeric ID.
+
+// > Can you add functionality that sends deleted contacts to a trash can 
+// (temporary memory) so that they are not deleted completely the first time and can be recovered later
+//  using a recover function? */
+
+// // Pseudo code
