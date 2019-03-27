@@ -11,13 +11,22 @@ ________________________________________________________________________________
 */
 
 /*...............................Optional:.................................*/
+
 //Add ways of editing and deleting contacts from your address book. All fields except email address should be editable.
 //pseudo
 	// First create the address book as an array to hold each object that is created
 	// delete function 
 		/* search the array containing created objects if the value exits delete it then also stop */
-	// create edit function
+	// create edit code
 		/* search the array containing created objects if the value exits edit it then also stop */
+		//
+//Add an ID field to your address, so that I can look it up using its numeric ID.
+
+// > Can you add functionality that sends deleted contacts to a trash can 
+// (temporary memory) so that they are not deleted completely the first time and can be recovered later
+//  using a recover function? */
+
+// // Pseudo code
 
 var my_address_book =[];
 
@@ -58,36 +67,28 @@ for(let i=0; i<my_address_book.length; i++)
 		} 
 	}
 
-/* implementing edit function */
+/* implementing edit code */
 
 
 var editing_you; //This holds the object whose properties I want to edit either input or a constant
 
-var gona_edit_you=false; //This checks if the object is in the array
+var gona_edit_you=false; //This turns to true if the instance is in the array that holds instance
 
 for(let i=0; i<my_address_book.length; i++)
 	{
 	if(my_address_book[i]=== editing_you)
 		{ 
 			var gona_edit_you = true;
-			
 		} 
 	}
 
-	if(gona_edit_you==true)
+	if(gona_edit_you==true) //if object was found then.....
 	{ 
+		//change some values
 		var object_index_array = Object.keys(editing_you);
 			object_index_array[0] = "new value"; //editing value at first index
 			object_index_array[1] = "new value"; //editing value at second index
 			object_index_array[2] = "new value"; //editing value at third index
 			object_index_array[3] = "new value"; //editing value at fourth index........e.t.c
 	}
-
-//
-// > Add an ID field to your address, so that I can look it up using its numeric ID.
-
-// > Can you add functionality that sends deleted contacts to a trash can 
-// (temporary memory) so that they are not deleted completely the first time and can be recovered later
-//  using a recover function? */
-
-// // Pseudo code
+/* Edit code ends here */
