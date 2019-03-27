@@ -18,22 +18,17 @@ function Contact(first_name, second_name, phone_number, email, address)
 		this.email = email;
 		this.address = address;
 
-		this.my_address = function(street, city, state) {
-			var value_in_address =  this.address;
-			// this.street = street;
-			// this.city = city;
-			// this.state = state;
-			street=value_in_address[0];
-			city = value_in_address[1];
-			state= value_in_address[2];
-				this.street = street;
-				this.city = city;
-				this.state = state;
-			this.address = (street + ", " + city + " " + state);
-			};
 	}
 
-//function my_address(street, city, state){this.street=street; this.city=city; this.state=state;}
+
+		Contact.prototype.my_address = function() {
+			var value_in_address =  this.address;
+			this.street=value_in_address[0];
+			this.city = value_in_address[1];
+			this.state= value_in_address[2];
+			return (this.street + ", " + this.city + " " + this.state);
+			
+			};
 var scosh = new Contact("scovia", "Nnamiggo", "0703268406","2305senk@gmail.com", ["wakiso", "kampala", "uganda"]);
 
-console.log(scosh.my_address);
+console.log(scosh.street);
