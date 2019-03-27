@@ -26,10 +26,14 @@ function Contact(first_name, second_name, phone_number, email, address)
 			street=value_in_address[0];
 			city = value_in_address[1];
 			state= value_in_address[2];
-			return (street + ", " + city + " " + state);
-	};
+				this.street = street;
+				this.city = city;
+				this.state = state;
+			this.address = (street + ", " + city + " " + state);
+			};
+	}
 
 //function my_address(street, city, state){this.street=street; this.city=city; this.state=state;}
-var scosh = new Contact("scovia", "Nnamiggo", "0703268406", ["wakiso", "kampala", "uganda"]);
+var scosh = new Contact("scovia", "Nnamiggo", "0703268406","2305senk@gmail.com", ["wakiso", "kampala", "uganda"]);
 
-console.log(scosh.address);
+console.log(scosh.my_address);
