@@ -1,3 +1,4 @@
+
 //Pseudo code
 
 /*
@@ -22,11 +23,11 @@ ________________________________________________________________________________
 		//
 //Add an ID field to your address, so that I can look it up using its numeric ID.
 
-// > Can you add functionality that sends deleted contacts to a trash can 
+// Can you add functionality that sends deleted contacts to a trash can 
 // (temporary memory) so that they are not deleted completely the first time and can be recovered later
 //  using a recover function? */
 
-// // Pseudo code
+//Pseudo code
 
 var my_address_book =[];
 
@@ -41,6 +42,7 @@ function Contact(first_name, second_name, phone_number, email, street, city, cou
 		this.address.street = street;
 		this.address.city = city;
 		this.address.country = country;
+		this.ID = Math.floor(Math.random()*1000000000000); //creating an Id with random values
 		my_address_book.push(this);
 	};
 
@@ -92,3 +94,39 @@ for(let i=0; i<my_address_book.length; i++)
 			object_index_array[3] = "new value"; //editing value at fourth index........e.t.c
 	}
 /* Edit code ends here */
+
+//Temporary deleting function
+var my_trush_can = [];
+var delete_some_object = (name_of_object) => {
+	var gona_delete_you=false; //This turns to true if the instance is in the array that holds instance
+
+for(let i=0; i<my_address_book.length; i++) // address book is an array containing objects
+	{
+	if(my_address_book[i]=== name_of_object)
+		{ 
+			var gona_delete_you = true;
+		} 
+	}
+  if (gona_delete_you==true) 
+  	{
+  		my_trush_can.push(my_address_book[i]);
+        my_address_book.splice(i,1);
+        return (my_address_book[i] + "has been deleted!!!!. It can be restored from the trush can");
+    }
+  }
+
+  //Recover function
+  var restore = (name_of_object) => {
+  var object_present = false;
+  for(var i=0; i<my_trush_can.length ; i++)
+  	{
+    if(my_trush_can[i] === name_of_object){
+      object_present = true;
+    }
+    if(object_present === true){
+      my_address_book.push(my_trush_can[i]);
+      my_trush_can.splice(i,1);
+      return (my_trush_can[i] + "has been restored!!!!");
+  }
+}
+}
